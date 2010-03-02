@@ -4,11 +4,15 @@ module VeloStar
     def initialize basedir
       @basedir = basedir
     end
-    def create id
-      system "rrdtool create #{@basedir}#{id}.rrd"
+    def get_filename id
+      "#{@basedir}#{id}.rrd"
     end
-    def update id, value
-      system "rrdtool update #{@basedir}#{id}.rrd N:#{value}"
+    def create id
+      filename = get_filename id
+      system "rrdtool create #{get_filename id}"
+    end
+    def update id, slots, bikes
+      system "rrdtool update #{get_filename id} N:#{slots}:#{bikes}"
     end
   end
 end
