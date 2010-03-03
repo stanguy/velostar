@@ -10,7 +10,7 @@ module VeloStar
       doc = Hpricot.parse fh
       doc.search("/apikr/answer/data/station") do|el|
         stations << {
-          :id => el.search("id")[0].innerText,
+          :id => el.search("number")[0].innerText,
           :latitude => el.search("latitude")[0].innerText,
           :longitude => el.search("longitude")[0].innerText,
           :bikes => el.search("bikesavailable")[0].innerText.to_i,
