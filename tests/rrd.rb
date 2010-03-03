@@ -14,7 +14,7 @@ class TestVeloStarRrd < Test::Unit::TestCase
   end
   def test_creation
     rrd = VeloStar::Rrd.new Basedir
-    rrd.expects(:system).with("rrdtool create #{Basedir}#{Test_id}.rrd").once
+    rrd.expects(:system).with("rrdtool create #{Basedir}#{Test_id}.rrd DS:slots:GAUGE:600:0:50 DS:bikes:GAUGE:600:0:50 RRA:AVERAGE:0.5:1:2016").once
     rrd.create( Test_id )
   end
   def test_update
