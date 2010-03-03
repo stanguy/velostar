@@ -1,0 +1,13 @@
+h1. VeloStar
+
+This repository regroups various scripts that would make use
+of the data provided by "Keolis Rennes":http://data.keolis-rennes.com regarding
+transportation in the city of Rennes, France.
+
+
+h2. bin/fetch_and_update.rb
+
+This script builds statistics of the Velo Star network using RRD. It
+fetches remote information from the Keolis API, eventually creates RRD
+files if needed and update those with current data (number of
+available bikes and slots)
