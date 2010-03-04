@@ -12,7 +12,7 @@ module VeloStar
       system "rrdtool create #{get_filename id} DS:slots:GAUGE:600:0:50 DS:bikes:GAUGE:600:0:50 RRA:AVERAGE:0.5:1:2016"
     end
     def update id, slots, bikes
-      system "rrdtool update #{get_filename id} N:#{slots}:#{bikes}"
+      system "rrdtool update -t slots:bikes #{get_filename id} N:#{slots}:#{bikes}"
     end
   end
 end

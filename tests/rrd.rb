@@ -19,7 +19,7 @@ class TestVeloStarRrd < Test::Unit::TestCase
   end
   def test_update
     rrd = VeloStar::Rrd.new Basedir
-    rrd.expects(:system).with("rrdtool update #{Basedir}#{Test_id}.rrd N:1:2").once
+    rrd.expects(:system).with("rrdtool update -t slots:bikes #{Basedir}#{Test_id}.rrd N:1:2").once
     rrd.update( Test_id, 1, 2 )
   end
 end
