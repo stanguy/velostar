@@ -14,8 +14,14 @@ module VeloStar
     def update id, slots, bikes
       system "rrdtool update -t slots:bikes #{get_filename id} N:#{slots}:#{bikes}"
     end
-    def fetch id
-      fetch_output = `rrdtool fetch #{get_filename id} AVERAGE`
+    def fetch id, starttime = nil
+      args = [ "rrdtool", "fetch", get_filename(id) ]
+      if not starttime.nil?
+        args.push "-s"
+        args.push starttime
+      end
+      args.push "AVERAGE"
+      fetch_output = `#{args.join " "}`
       data = {}
       fetch_output.each_line do |line|
         if line.match /nan/

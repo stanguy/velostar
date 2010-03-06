@@ -8,6 +8,7 @@ require 'mocha'
 class TestVeloStarRrd < Test::Unit::TestCase
   Test_id = 12
   Basedir = '/tmp/'
+  Test_timestart = 1267655513
   def test_filename
     rrd = VeloStar::Rrd.new Basedir
     assert_equal "#{Basedir}#{Test_id}.rrd", rrd.get_filename( Test_id )
@@ -33,5 +34,10 @@ class TestVeloStarRrd < Test::Unit::TestCase
       assert_kind_of Array, ret[k]
     end
   end
-
+  def test_fetch_with_start_time
+    rrd = VeloStar::Rrd.new Basedir
+    rrd.expects(:`#` emacs is broken here 
+                ).with("rrdtool fetch #{Basedir}#{Test_id}.rrd -s #{Test_timestart} AVERAGE").once.returns("   slots   bikes\n\n1267804800: 2.8134873133e+01 1.8651268667e+001267805100: 3.0000000000e+01 0.0000000000e+00\n1267805400: 3.0000000000e+01 0.0000000000e+00\n")
+    ret = rrd.fetch( Test_id, Test_timestart )
+  end
 end
