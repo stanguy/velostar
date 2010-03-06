@@ -11,3 +11,10 @@ This script builds statistics of the Velo Star network using RRD. It
 fetches remote information from the Keolis API, eventually creates RRD
 files if needed and update those with current data (number of
 available bikes and slots)
+
+
+h1. License
+
+All the code here is under the WTFPL, unless otherwise noted.
+
+The XML test data are provided by Keolis Rennes and are licensed under CC-BY-NC-ND.
