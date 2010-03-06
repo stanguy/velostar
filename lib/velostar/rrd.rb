@@ -14,5 +14,20 @@ module VeloStar
     def update id, slots, bikes
       system "rrdtool update -t slots:bikes #{get_filename id} N:#{slots}:#{bikes}"
     end
+    def fetch id
+      fetch_output = `rrdtool fetch #{get_filename id} AVERAGE`
+      data = {}
+      fetch_output.each_line do |line|
+        if line.match /nan/
+          next
+        end
+        f = line.split( / +/ )
+        if 3 != f.length
+          next
+        end
+        data[f[0].to_i] = [ f[1].to_f, f[2].to_f ]
+      end
+      data
+    end
   end
 end
