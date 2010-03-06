@@ -7,6 +7,8 @@ require 'velostar/rrd'
 
 require '../config.rb'
 
+require 'cairo'
+require 'getoptlong'
 
 if not defined? KEOLIS_API_KEY then
   puts "Can't do anything without an API key"
@@ -17,18 +19,26 @@ if not defined? CACHE_BASEDIR then
   exit 1
 end
 
-if ARGV.length != 1 then
+opts = GetoptLong.new(
+  [ '--output', '-o', GetoptLong::REQUIRED_ARGUMENT ],
+  [ '--start', '-s', GetoptLong::REQUIRED_ARGUMENT ]
+)
+opts.each do|opt,arg|
+  case opt
+  when '--output'
+    Output_dir = arg
+  when '--start'
+    Start_time = arg
+  end
+end
+if ! defined? Output_dir 
   puts "Need an output directory as parameter"
   exit 1
 end
-Output_dir = ARGV[0]
 if ! File.exist? Output_dir
   puts "The output directory does not exist"
   exit 1
 end
-
-require 'cairo'
-
 Background_Files = [ { 
   :filename => '../map-1.png', 
   :bounds => { :north => 48.1502, :west => -1.723, :east => -1.5872, :south => 48.0769 },
@@ -55,8 +65,11 @@ end
 
 rrd = VeloStar::Rrd.new RRD_BASEDIR
 timeline = nil
+if ! defined? Start_time
+  Start_time = nil
+end
 list_of_stations.each do |station|
-  station[:history] = rrd.fetch station[:id]
+  station[:history] = rrd.fetch station[:id], Start_time
   if timeline.nil?
     timeline = station[:history].keys
   else
@@ -82,8 +95,18 @@ list_of_stations.each do|station|
   station[:longitude] = coords[:x]
   station[:latitude] = coords[:y]
 end
+reftime = nil
+timestr = ''
+timeline.sort.each do |time|
+  if 0 == time
+    next
+  end
 
-timeline.each do |time|
+  if reftime.nil? || ( 0 == ( time % 3600 ) )
+    t = Time.at time
+    timestr = t.strftime( "%d/%m/%Y %H:%M" )
+    reftime = time
+  end
 
   Cairo::ImageSurface.new( background[:size][:width], background[:size][:height] ) do |surface|
   
@@ -91,6 +114,16 @@ timeline.each do |time|
 
     cr.set_source( bgicon )
     cr.paint
+
+    cr.set_source_color( '#111111' );
+    cr.save
+    cr.move_to( 10, 10 )
+    cr.select_font_face( 'monospace', 'normal', 'normal' );
+    cr.set_font_size( 12 );
+    cr.show_text( timestr );
+    cr.stroke
+    cr.restore
+
 
     list_of_stations.each do |station|
       total_slots = station[:history][time][0] + station[:history][time][1]
