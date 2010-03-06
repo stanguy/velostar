@@ -54,7 +54,7 @@ Background_Files = [ {
 }, {
   :filename => '../map_1280x720.png',
   :bounds => { :north => 48.1405, :west => -1.7270, :east => -1.566, :south => 48.080 },
-  :size => { :width => 1280, height: 720 }
+  :size => { :width => 1280, :height => 720 }
 } ]
 
 background = Background_Files[background_id]
