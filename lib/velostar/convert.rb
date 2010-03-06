@@ -15,7 +15,15 @@ module VeloStar
                point[:y].between?( @bounds[:south], @bounds[:north] ) )
         raise RangeError
       end
-      { :x => (point[:x] - @bounds[:west])*@new_bounds[:width], :y => (point[:y]-@bounds[:north])*(-1*@new_bounds[:height]) }
+      x = point[:x]
+      y = point[:y]
+      # change origin
+      x = x - @bounds[:west]
+      y = y - @bounds[:north]
+      # scale
+      x = x * ( @new_bounds[:width] / ( @bounds[:east] - @bounds[:west] ) )
+      y = y * ( @new_bounds[:height] / ( @bounds[:south] - @bounds[:north] ) )
+      { :x => x, :y => y }
     end
   end
 end
