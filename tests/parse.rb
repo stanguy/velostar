@@ -16,6 +16,7 @@ class TestVeloStarParse < Test::Unit::TestCase
     ret.each do|s|
       assert s.has_key?(:id), "no id entry"
       assert s.has_key?(:latitude), "no latitude entry"
+      assert_kind_of Float, s[:latitude]
       assert s.has_key?(:slots), "no slots entry"
       assert_kind_of Integer, s[:slots]
       assert s.has_key?(:bikes), "no nikes entry"
