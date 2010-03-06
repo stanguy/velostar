@@ -12,6 +12,16 @@ fetches remote information from the Keolis API, eventually creates RRD
 files if needed and update those with current data (number of
 available bikes and slots)
 
+h2. bin/place_stations.rb
+
+This scripts creates images displaying the status of the VéloStar
+stations. It uses different map images as background overlay. It makes
+use of the existing RRD files and creates an image for each period
+that can be fetched, allowing one to use those images to build an
+animation. For example:
+
+ * "Simple background":http://www.youtube.com/watch?v=6L5RELeFO9A
+ * "HD resolution":http://www.youtube.com/watch?v=H5ytqWZgSa0
 
 h1. License
 
