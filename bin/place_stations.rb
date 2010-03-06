@@ -21,14 +21,18 @@ end
 
 opts = GetoptLong.new(
   [ '--output', '-o', GetoptLong::REQUIRED_ARGUMENT ],
-  [ '--start', '-s', GetoptLong::REQUIRED_ARGUMENT ]
+  [ '--start', '-s', GetoptLong::REQUIRED_ARGUMENT ],
+  [ '--background', '-b', GetoptLong::REQUIRED_ARGUMENT ]
 )
+background_id = 2
 opts.each do|opt,arg|
   case opt
   when '--output'
     Output_dir = arg
   when '--start'
     Start_time = arg
+  when '--background'
+    background_id = arg.to_i
   end
 end
 if ! defined? Output_dir 
@@ -47,7 +51,17 @@ Background_Files = [ {
   :filename => '../rennesz30.png',
   :bounds => { :north => 48.14847 , :west => -1.72531, :south => 48.07711 , :east => -1.56436 },
   :size => { :width => 946, :height => 686 } 
+}, {
+  :filename => '../map_1280x720.png',
+  :bounds => { :north => 48.1405, :west => -1.7270, :east => -1.566, :south => 48.080 },
+  :size => { :width => 1280, height: 720 }
 } ]
+
+background = Background_Files[background_id]
+if background.nil? then
+  puts "Unable to use the requested background"
+  exit 1
+end
 
 Stations_cache = CACHE_BASEDIR + 'stations.xml'
 list_of_stations = nil
@@ -77,15 +91,10 @@ list_of_stations.each do |station|
   end
 end
 
-background = Background_Files[1]
-
 bgicon = Cairo::ImageSurface.from_png( background[:filename] )
 
-Colors = { 
-  :plenty_of_bikes => '#2810B0',
-  :equal => '#23A6B8',
-  :plenty_of_slots => '#8FCF42'
-}
+Colors = [ '#A4DBAC', '#8ED197', '#78C482', '#78C4A2', '#78C4AF', '#8BC1CC',
+           '#7AB8C4', '#88BEDB', '#88AFDB', '#888FDB', '#5E67CC', '#3742B3' ]
 Drawing_size = 20
 
 converter = VeloStar::Converter.new VeloStar::Converter::TOP_LEFT, background[:bounds], background[:size]
@@ -117,9 +126,9 @@ timeline.sort.each do |time|
 
     cr.set_source_color( '#111111' );
     cr.save
-    cr.move_to( 10, 10 )
+    cr.move_to( background[:size][:width]-180, background[:size][:height]-15  )
     cr.select_font_face( 'monospace', 'normal', 'normal' );
-    cr.set_font_size( 12 );
+    cr.set_font_size( 16 );
     cr.show_text( timestr );
     cr.stroke
     cr.restore
@@ -127,14 +136,8 @@ timeline.sort.each do |time|
 
     list_of_stations.each do |station|
       total_slots = station[:history][time][0] + station[:history][time][1]
-      percent = station[:history][time][1] * 100 / total_slots
-      if percent > 75 
-        color = Colors[:plenty_of_bikes]
-      elsif percent < 25
-        color = Colors[:plenty_of_slots]
-      else
-        color = Colors[:equal]
-      end
+      percent = station[:history][time][1] *10/ total_slots
+      color = Colors[percent.round]
       cr.set_source_color(color)
       #    cr.rectangle( coords[:x] - Drawing_size/2, coords[:y] - Drawing_size/2, Drawing_size, Drawing_size )
       cr.save
@@ -143,6 +146,14 @@ timeline.sort.each do |time|
       cr.arc( 0, 0, 1, 0, Math::PI * 2 )
       cr.restore
       cr.fill
+      cr.stroke
+      # and now, around
+      cr.set_source_color('#222222')
+      cr.save
+      cr.translate( station[:longitude]+Drawing_size/2, station[:latitude]+Drawing_size/2 )
+      cr.scale( Drawing_size/2, Drawing_size/2 );
+      cr.arc( 0, 0, 1, 0, Math::PI * 2 )
+      cr.restore
       cr.stroke
     end
 
