@@ -59,15 +59,36 @@ module VeloStar
       cr.restore
       cr.stroke
     end
+    Legend_width = 20
+    Legend_height = 20
+
     def paint_legend
       # paint something about the colors used
+      nb_colors = Colors.length
+      if not defined? @@legend_overlay
+        surface = Cairo::ImageSurface.new( nb_colors * Legend_width, Legend_height )
+        cr = Cairo::Context.new( surface )
+        Colors.each_with_index do|color,idx|
+          cr.set_source_color color
+          cr.rectangle( idx*Legend_width, 0, Legend_width, Legend_height )
+          cr.fill
+          cr.stroke
+        end
+        cr.set_source_color Outer_color
+        cr.rectangle( 0, 0, Legend_width * nb_colors, Legend_height )
+        cr.stroke
+        cr.target.write_to_png "/tmp/leg.png"
+        @@legend_overlay = surface
+      end
+      @context.set_source( @@legend_overlay, @size[:width] - Legend_width * ( nb_colors + 1 ), Legend_height )
+      @context.paint
     end
     def paint_time_legend str
       @context.set_source_color( '#111111' );
       @context.save
       @context.move_to( @size[:width]-180, @size[:height]-15  )
-      @context.select_font_face( 'monospace', 'normal', 'normal' );
-      @context.set_font_size( 16 );
+      @context.select_font_face( 'monospace', 'normal', 'bold' );
+      @context.set_font_size( 18 );
       @context.show_text( str );
       @context.stroke
       @context.restore
