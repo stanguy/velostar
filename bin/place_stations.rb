@@ -98,18 +98,14 @@ list_of_stations.each do|station|
   station[:longitude] = coords[:x]
   station[:latitude] = coords[:y]
 end
-reftime = nil
 timestr = ''
 timeline.sort.each do |time|
   if 0 == time
     next
   end
 
-  if reftime.nil? || ( 0 == ( time % 3600 ) )
-    t = Time.at time
-    timestr = t.strftime( "%d/%m/%Y %H:%M" )
-    reftime = time
-  end
+  t = Time.at time
+  timestr = t.strftime( "%d/%m/%Y %H:%M" )
   
   painter = VeloStar::Painter.new( background )
   
