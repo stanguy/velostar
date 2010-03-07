@@ -19,8 +19,8 @@ module VeloStar
         @@overlay_cache[background_overlay[:filename]] = bgicon
       end
       @size = background_overlay[:size]
-      surface = Cairo::ImageSurface.new( background_overlay[:size][:width], background_overlay[:size][:height] )
-      @context = Cairo::Context.new( surface )
+      @surface = Cairo::ImageSurface.new( background_overlay[:size][:width], background_overlay[:size][:height] )
+      @context = Cairo::Context.new( @surface )
       @context.set_source( @@overlay_cache[background_overlay[:filename]] )
       @context.paint
       prepare_surfaces
@@ -98,8 +98,10 @@ module VeloStar
       @context.set_source( @@color_surfaces[color_idx], x, y )
       @context.paint
     end
-    def write filename
+    def write filename      
       @context.target.write_to_png( filename )
+      @context.destroy
+      @surface.destroy
     end
   end
 end
