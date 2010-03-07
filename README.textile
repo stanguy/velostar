@@ -1,24 +1,15 @@
 h1. VeloStar
 
-This repository regroups various scripts that would make use
-of the data provided by "Keolis Rennes":http://data.keolis-rennes.com regarding
-transportation in the city of Rennes, France.
+This repository regroups various scripts that would make use of the data provided by "Keolis Rennes":http://data.keolis-rennes.com regarding transportation in the city of Rennes, France.
 
 
 h2. bin/fetch_and_update.rb
 
-This script builds statistics of the Velo Star network using RRD. It
-fetches remote information from the Keolis API, eventually creates RRD
-files if needed and update those with current data (number of
-available bikes and slots)
+This script builds statistics of the Velo Star network using RRD. It fetches remote information from the Keolis API, eventually creates RRD files if needed and update those with current data (number of available bikes and slots)
 
 h2. bin/place_stations.rb
 
-This scripts creates images displaying the status of the VéloStar
-stations. It uses different map images as background overlay. It makes
-use of the existing RRD files and creates an image for each period
-that can be fetched, allowing one to use those images to build an
-animation. For example:
+This scripts creates images displaying the status of the VÃ©loStar stations. It uses different map images as background overlay. It makes use of the existing RRD files and creates an image for each period that can be fetched, allowing one to use those images to build an animation. For example:
 
  * "Simple background":http://www.youtube.com/watch?v=6L5RELeFO9A
  * "HD resolution":http://www.youtube.com/watch?v=H5ytqWZgSa0
@@ -29,7 +20,4 @@ All the code here is under the WTFPL, unless otherwise noted.
 
 The XML test data are provided by Keolis Rennes and are licensed under CC-BY-NC-ND.
 
-The map overlays were generated from
-"OpenStreetMap":http://www.openstreetmap.org/ and are thus (c)
-OpenStreetMap (and) contributors,
-"CC-BY-SA":http://creativecommons.org/licenses/by-sa/2.0/.
+The map overlays were generated from "OpenStreetMap":http://www.openstreetmap.org/ and are thus (c) OpenStreetMap (and) contributors, "CC-BY-SA":http://creativecommons.org/licenses/by-sa/2.0/.
