@@ -3,11 +3,11 @@
 require 'velostar/convert'
 require 'velostar/api'
 require 'velostar/parse'
+require 'velostar/painter'
 require 'velostar/rrd'
 
 require '../config.rb'
 
-require 'cairo'
 require 'getoptlong'
 
 if not defined? KEOLIS_API_KEY then
@@ -91,12 +91,6 @@ list_of_stations.each do |station|
   end
 end
 
-bgicon = Cairo::ImageSurface.from_png( background[:filename] )
-
-Colors = [ '#A4DBAC', '#8ED197', '#78C482', '#78C4A2', '#78C4AF', '#8BC1CC',
-           '#7AB8C4', '#88BEDB', '#88AFDB', '#888FDB', '#5E67CC', '#3742B3' ]
-Drawing_size = 20
-
 converter = VeloStar::Converter.new VeloStar::Converter::TOP_LEFT, background[:bounds], background[:size]
 
 list_of_stations.each do|station|
@@ -116,47 +110,15 @@ timeline.sort.each do |time|
     timestr = t.strftime( "%d/%m/%Y %H:%M" )
     reftime = time
   end
-
-  Cairo::ImageSurface.new( background[:size][:width], background[:size][:height] ) do |surface|
   
-    cr = Cairo::Context.new(surface)
+  painter = VeloStar::Painter.new( background )
+  
+  painter.paint_time_legend timestr
 
-    cr.set_source( bgicon )
-    cr.paint
-
-    cr.set_source_color( '#111111' );
-    cr.save
-    cr.move_to( background[:size][:width]-180, background[:size][:height]-15  )
-    cr.select_font_face( 'monospace', 'normal', 'normal' );
-    cr.set_font_size( 16 );
-    cr.show_text( timestr );
-    cr.stroke
-    cr.restore
-
-
-    list_of_stations.each do |station|
-      total_slots = station[:history][time][0] + station[:history][time][1]
-      percent = station[:history][time][1] *10/ total_slots
-      color = Colors[percent.round]
-      cr.set_source_color(color)
-      #    cr.rectangle( coords[:x] - Drawing_size/2, coords[:y] - Drawing_size/2, Drawing_size, Drawing_size )
-      cr.save
-      cr.translate( station[:longitude]+Drawing_size/2, station[:latitude]+Drawing_size/2 )
-      cr.scale( Drawing_size/2, Drawing_size/2 );
-      cr.arc( 0, 0, 1, 0, Math::PI * 2 )
-      cr.restore
-      cr.fill
-      cr.stroke
-      # and now, around
-      cr.set_source_color('#222222')
-      cr.save
-      cr.translate( station[:longitude]+Drawing_size/2, station[:latitude]+Drawing_size/2 )
-      cr.scale( Drawing_size/2, Drawing_size/2 );
-      cr.arc( 0, 0, 1, 0, Math::PI * 2 )
-      cr.restore
-      cr.stroke
-    end
-
-    cr.target.write_to_png( Output_dir + time.to_s + '.png' )
+  list_of_stations.each do |station|
+    total_slots = station[:history][time][0] + station[:history][time][1]
+    percent = station[:history][time][1] / total_slots.to_f
+    painter.paint_station( station[:longitude], station[:latitude], percent )
   end
+  painter.write( Output_dir + time.to_s + '.png' )
 end
