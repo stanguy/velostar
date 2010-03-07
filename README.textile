@@ -28,3 +28,8 @@ h1. License
 All the code here is under the WTFPL, unless otherwise noted.
 
 The XML test data are provided by Keolis Rennes and are licensed under CC-BY-NC-ND.
+
+The map overlays were generated from
+"OpenStreetMap":http://www.openstreetmap.org/ and are thus (c)
+OpenStreetMap (and) contributors,
+"CC-BY-SA":http://creativecommons.org/licenses/by-sa/2.0/.
