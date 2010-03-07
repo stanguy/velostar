@@ -22,7 +22,8 @@ end
 opts = GetoptLong.new(
   [ '--output', '-o', GetoptLong::REQUIRED_ARGUMENT ],
   [ '--start', '-s', GetoptLong::REQUIRED_ARGUMENT ],
-  [ '--background', '-b', GetoptLong::REQUIRED_ARGUMENT ]
+  [ '--background', '-b', GetoptLong::REQUIRED_ARGUMENT ],
+  [ '--encode', '-e', GetoptLong::NO_ARGUMENT ]
 )
 background_id = 2
 opts.each do|opt,arg|
@@ -33,6 +34,8 @@ opts.each do|opt,arg|
     Start_time = arg
   when '--background'
     background_id = arg.to_i
+  when '--encode'
+    Encode_movie = true
   end
 end
 if ! defined? Output_dir 
@@ -117,4 +120,8 @@ timeline.sort.each do |time|
     painter.paint_station( station[:longitude], station[:latitude], percent )
   end
   painter.write( Output_dir + time.to_s + '.png' )
+end
+
+if defined? Encode_movie
+  system("cd #{Output_dir} && mencoder \"mf://*.png\" -mf fps=4 -o video.avi -ovc lavc -lavcopts vcodec=mpeg4")
 end
