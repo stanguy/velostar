@@ -77,7 +77,6 @@ module VeloStar
         cr.set_source_color Outer_color
         cr.rectangle( 0, 0, Legend_width * nb_colors, Legend_height )
         cr.stroke
-        cr.target.write_to_png "/tmp/leg.png"
         @@legend_overlay = surface
       end
       @context.set_source( @@legend_overlay, @size[:width] - Legend_width * ( nb_colors + 1 ), Legend_height )
