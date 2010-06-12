@@ -1,878 +1,1049 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
-<apikr>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<opendata>
 	<request>http://data.keolis-rennes.com/xml/?version=1.0&amp;key=CECIESTSENSEETREUNECLE&amp;cmd=getstation</request>
 	<answer>
 		<status code="0" message="OK"/>
 		<data>
 			<station>
-				<id>2</id>
-				<name>REPUBLIQUE</name>
-				<number>1</number>
-				<latitude>48.109955</latitude>
-				<longitude>-1.677976</longitude>
-				<slotsavailable>25</slotsavailable>
-				<bikesavailable>5</bikesavailable>
-				<pos>1</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>3</id>
-				<name>MAIRIE</name>
-				<number>2</number>
-				<latitude>48.11166</latitude>
-				<longitude>-1.678748</longitude>
-				<slotsavailable>7</slotsavailable>
-				<bikesavailable>15</bikesavailable>
-				<pos>1</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>4</id>
-				<name>CHAMP JACQUET</name>
-				<number>3</number>
-				<latitude>48.1127</latitude>
-				<longitude>-1.680052</longitude>
-				<slotsavailable>11</slotsavailable>
-				<bikesavailable>13</bikesavailable>
-				<pos>1</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>5</id>
-				<name>PLACE HOCHE</name>
-				<number>4</number>
-				<latitude>48.115208</latitude>
-				<longitude>-1.677149</longitude>
-				<slotsavailable>22</slotsavailable>
-				<bikesavailable>1</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>6</id>
-				<name>SAINTE ANNE</name>
-				<number>5</number>
-				<latitude>48.11442</latitude>
-				<longitude>-1.680715</longitude>
-				<slotsavailable>8</slotsavailable>
-				<bikesavailable>16</bikesavailable>
-				<pos>1</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>7</id>
-				<name>HOTEL DIEU</name>
-				<number>6</number>
-				<latitude>48.11754</latitude>
-				<longitude>-1.677868</longitude>
-				<slotsavailable>23</slotsavailable>
+				<id>75</id>
+				<number>75</number>
+				<name>ZAC SAINT SULPICE</name>
+				<state>1</state>
+				<latitude>48.1321</latitude>
+				<longitude>-1.63528</longitude>
+				<slotsavailable>27</slotsavailable>
 				<bikesavailable>3</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>8</id>
-				<name>FAC DE DROIT</name>
-				<number>7</number>
-				<latitude>48.11812</latitude>
-				<longitude>-1.670716</longitude>
-				<slotsavailable>21</slotsavailable>
-				<bikesavailable>5</bikesavailable>
-				<pos>0</pos>
-				<district>Thabor - St Hélier</district>
-			</station>
-			<station>
-				<id>9</id>
-				<name>RECTORAT</name>
-				<number>8</number>
-				<latitude>48.119343</latitude>
-				<longitude>-1.674549</longitude>
-				<slotsavailable>9</slotsavailable>
-				<bikesavailable>8</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>10</id>
-				<name>SAINT GEORGES</name>
-				<number>9</number>
-				<latitude>48.112377</latitude>
-				<longitude>-1.674404</longitude>
-				<slotsavailable>6</slotsavailable>
-				<bikesavailable>12</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>11</id>
-				<name>MUSEE BEAUX ARTS</name>
-				<number>10</number>
-				<latitude>48.109673</latitude>
-				<longitude>-1.674133</longitude>
-				<slotsavailable>4</slotsavailable>
-				<bikesavailable>12</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>12</id>
-				<name>LIBERTE</name>
-				<number>11</number>
-				<latitude>48.10749</latitude>
-				<longitude>-1.678317</longitude>
-				<slotsavailable>13</slotsavailable>
-				<bikesavailable>11</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>13</id>
-				<name>TNB</name>
-				<number>12</number>
-				<latitude>48.107662</latitude>
-				<longitude>-1.67372</longitude>
-				<slotsavailable>12</slotsavailable>
-				<bikesavailable>16</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>14</id>
-				<name>DINAN</name>
-				<number>13</number>
-				<latitude>48.117195</latitude>
-				<longitude>-1.682615</longitude>
-				<slotsavailable>2</slotsavailable>
-				<bikesavailable>13</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>15</id>
-				<name>LAENNEC</name>
-				<number>14</number>
-				<latitude>48.106857</latitude>
-				<longitude>-1.665822</longitude>
-				<slotsavailable>4</slotsavailable>
-				<bikesavailable>12</bikesavailable>
-				<pos>0</pos>
-				<district>Thabor - St Hélier</district>
-			</station>
-			<station>
-				<id>16</id>
-				<name>GARES Nord</name>
-				<number>15</number>
-				<latitude>48.104076</latitude>
-				<longitude>-1.672125</longitude>
-				<slotsavailable>32</slotsavailable>
-				<bikesavailable>13</bikesavailable>
-				<pos>1</pos>
-				<district>Thabor - St Hélier</district>
-			</station>
-			<station>
-				<id>17</id>
-				<name>CHAMPS LIBRES</name>
-				<number>16</number>
-				<latitude>48.10553</latitude>
-				<longitude>-1.674279</longitude>
-				<slotsavailable>8</slotsavailable>
-				<bikesavailable>16</bikesavailable>
-				<pos>1</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>18</id>
-				<name>CHARLES DE GAULLE</name>
-				<number>17</number>
-				<latitude>48.10508</latitude>
-				<longitude>-1.677254</longitude>
-				<slotsavailable>14</slotsavailable>
-				<bikesavailable>10</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>19</id>
-				<name>DALLE DU COLOMBIER</name>
-				<number>18</number>
-				<latitude>48.10477</latitude>
-				<longitude>-1.678481</longitude>
-				<slotsavailable>9</slotsavailable>
-				<bikesavailable>10</bikesavailable>
-				<pos>1</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>20</id>
-				<name>PLELO COLOMBIER</name>
-				<number>19</number>
-				<latitude>48.10614</latitude>
-				<longitude>-1.681467</longitude>
-				<slotsavailable>19</slotsavailable>
-				<bikesavailable>6</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>21</id>
-				<name>PONT DE NANTES</name>
-				<number>20</number>
-				<latitude>48.10201</latitude>
-				<longitude>-1.683975</longitude>
-				<slotsavailable>4</slotsavailable>
-				<bikesavailable>14</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>22</id>
-				<name>LES HALLES</name>
-				<number>21</number>
-				<latitude>48.107594</latitude>
-				<longitude>-1.68011</longitude>
-				<slotsavailable>14</slotsavailable>
-				<bikesavailable>2</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>23</id>
-				<name>CITE JUDICIAIRE</name>
-				<number>43</number>
-				<latitude>48.10513864768105</latitude>
-				<longitude>-1.6860580444335938</longitude>
-				<slotsavailable>7</slotsavailable>
-				<bikesavailable>17</bikesavailable>
-				<pos>0</pos>
-				<district>Cleunay-Arsenal-Redon</district>
-			</station>
-			<station>
-				<id>24</id>
-				<name>ROTONDE</name>
-				<number>23</number>
-				<latitude>48.106647</latitude>
-				<longitude>-1.686758</longitude>
-				<slotsavailable>9</slotsavailable>
-				<bikesavailable>10</bikesavailable>
-				<pos>0</pos>
-				<district>Cleunay-Arsenal-Redon</district>
-			</station>
-			<station>
-				<id>26</id>
-				<name>PLACE DE BRETAGNE</name>
-				<number>24</number>
-				<latitude>48.10961</latitude>
-				<longitude>-1.684018</longitude>
-				<slotsavailable>10</slotsavailable>
-				<bikesavailable>10</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>28</id>
-				<name>OFFICE DE TOURISME</name>
-				<number>25</number>
-				<latitude>48.110268</latitude>
-				<longitude>-1.683121</longitude>
-				<slotsavailable>7</slotsavailable>
-				<bikesavailable>3</bikesavailable>
-				<pos>1</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>29</id>
-				<name>LES LICES</name>
-				<number>26</number>
-				<latitude>48.112755</latitude>
-				<longitude>-1.685037</longitude>
-				<slotsavailable>9</slotsavailable>
-				<bikesavailable>9</bikesavailable>
-				<pos>0</pos>
-				<district>Centre-Ville</district>
-			</station>
-			<station>
-				<id>30</id>
-				<name>HORIZONS</name>
-				<number>27</number>
-				<latitude>48.112022</latitude>
-				<longitude>-1.688582</longitude>
-				<slotsavailable>3</slotsavailable>
-				<bikesavailable>11</bikesavailable>
-				<pos>0</pos>
-				<district>Bourg l'Evêque-La Touche-Moulin du Comte</district>
-			</station>
-			<station>
-				<id>31</id>
-				<name>CHEQUES POSTAUX</name>
-				<number>28</number>
-				<latitude>48.108852</latitude>
-				<longitude>-1.69339</longitude>
-				<slotsavailable>2</slotsavailable>
-				<bikesavailable>12</bikesavailable>
-				<pos>0</pos>
-				<district>Bourg l'Evêque-La Touche-Moulin du Comte</district>
-			</station>
-			<station>
-				<id>32</id>
-				<name>JULES FERRY</name>
-				<number>29</number>
-				<latitude>48.121384</latitude>
-				<longitude>-1.671135</longitude>
-				<slotsavailable>11</slotsavailable>
-				<bikesavailable>5</bikesavailable>
 				<pos>0</pos>
 				<district>Maurepas - Patton</district>
-			</station>
-			<station>
-				<id>33</id>
-				<name>DUCHESSE ANNE</name>
-				<number>30</number>
-				<latitude>48.11907</latitude>
-				<longitude>-1.667741</longitude>
-				<slotsavailable>15</slotsavailable>
-				<bikesavailable>1</bikesavailable>
-				<pos>0</pos>
-				<district>Thabor - St Hélier</district>
-			</station>
-			<station>
-				<id>34</id>
-				<name>LA TOUCHE</name>
-				<number>32</number>
-				<latitude>48.116585</latitude>
-				<longitude>-1.690958</longitude>
-				<slotsavailable>3</slotsavailable>
-				<bikesavailable>12</bikesavailable>
-				<pos>0</pos>
-				<district>Bourg l'Evêque-La Touche-Moulin du Comte</district>
-			</station>
-			<station>
-				<id>35</id>
-				<name>MALAKOFF</name>
-				<number>31</number>
-				<latitude>48.105244</latitude>
-				<longitude>-1.693012</longitude>
-				<slotsavailable>5</slotsavailable>
-				<bikesavailable>11</bikesavailable>
-				<pos>0</pos>
-				<district>Cleunay-Arsenal-Redon</district>
-			</station>
-			<station>
-				<id>37</id>
-				<name>ANATOLE FRANCE</name>
-				<number>33</number>
-				<latitude>48.11799</latitude>
-				<longitude>-1.686499</longitude>
-				<slotsavailable>8</slotsavailable>
-				<bikesavailable>6</bikesavailable>
-				<pos>0</pos>
-				<district>Bourg l'Evêque-La Touche-Moulin du Comte</district>
-			</station>
-			<station>
-				<id>38</id>
-				<name>BREST VERDUN</name>
-				<number>34</number>
-				<latitude>48.112988</latitude>
-				<longitude>-1.69327</longitude>
-				<slotsavailable>7</slotsavailable>
-				<bikesavailable>8</bikesavailable>
-				<pos>0</pos>
-				<district>Bourg l'Evêque-La Touche-Moulin du Comte</district>
-			</station>
-			<station>
-				<id>39</id>
-				<name>PONT DE CHATEAUDUN</name>
-				<number>35</number>
-				<latitude>48.11018</latitude>
-				<longitude>-1.667282</longitude>
-				<slotsavailable>8</slotsavailable>
-				<bikesavailable>16</bikesavailable>
-				<pos>0</pos>
-				<district>Thabor - St Hélier</district>
-			</station>
-			<station>
-				<id>40</id>
-				<name>PAUL BERT</name>
-				<number>36</number>
-				<latitude>48.110107</latitude>
-				<longitude>-1.670001</longitude>
-				<slotsavailable>7</slotsavailable>
-				<bikesavailable>9</bikesavailable>
-				<pos>0</pos>
-				<district>Thabor - St Hélier</district>
-			</station>
-			<station>
-				<id>41</id>
-				<name>AUBERGE DE JEUNESSE</name>
-				<number>37</number>
-				<latitude>48.120853</latitude>
-				<longitude>-1.681886</longitude>
-				<slotsavailable>3</slotsavailable>
-				<bikesavailable>15</bikesavailable>
-				<pos>0</pos>
-				<district>St Martin</district>
-			</station>
-			<station>
-				<id>42</id>
-				<name>MARBEUF</name>
-				<number>38</number>
-				<latitude>48.111732</latitude>
-				<longitude>-1.702095</longitude>
-				<slotsavailable>10</slotsavailable>
-				<bikesavailable>9</bikesavailable>
-				<pos>0</pos>
-				<district>Bourg l'Evêque-La Touche-Moulin du Comte</district>
-			</station>
-			<station>
-				<id>44</id>
-				<name>PIERRE MARTIN</name>
-				<number>40</number>
-				<latitude>48.103485</latitude>
-				<longitude>-1.662345</longitude>
-				<slotsavailable>15</slotsavailable>
-				<bikesavailable>5</bikesavailable>
-				<pos>0</pos>
-				<district>Francisco Ferrer-Vern-Poterie</district>
-			</station>
-			<station>
-				<id>45</id>
-				<name>CIMETIERE EST</name>
-				<number>41</number>
-				<latitude>48.104294</latitude>
-				<longitude>-1.650112</longitude>
-				<slotsavailable>6</slotsavailable>
-				<bikesavailable>12</bikesavailable>
-				<pos>0</pos>
-				<district>Francisco Ferrer-Vern-Poterie</district>
-			</station>
-			<station>
-				<id>46</id>
-				<name>PONT DE STRASBOURG</name>
-				<number>42</number>
-				<latitude>48.10975</latitude>
-				<longitude>-1.656438</longitude>
-				<slotsavailable>3</slotsavailable>
-				<bikesavailable>13</bikesavailable>
-				<pos>0</pos>
-				<district>Thabor - St Hélier</district>
-			</station>
-			<station>
-				<id>47</id>
-				<name>OBERTHUR</name>
-				<number>22</number>
-				<latitude>48.11341996878819</latitude>
-				<longitude>-1.6620254516601562</longitude>
-				<slotsavailable>8</slotsavailable>
-				<bikesavailable>10</bikesavailable>
-				<pos>0</pos>
-				<district>Thabor - St Hélier</district>
-			</station>
-			<station>
-				<id>48</id>
-				<name>METZ SEVIGNE</name>
-				<number>44</number>
-				<latitude>48.116005</latitude>
-				<longitude>-1.658303</longitude>
-				<slotsavailable>5</slotsavailable>
-				<bikesavailable>11</bikesavailable>
-				<pos>0</pos>
-				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
-			</station>
-			<station>
-				<id>49</id>
-				<name>GARES Sud</name>
-				<number>45</number>
-				<latitude>48.10224685565924</latitude>
-				<longitude>-1.6730345785617828</longitude>
-				<slotsavailable>15</slotsavailable>
-				<bikesavailable>5</bikesavailable>
-				<pos>0</pos>
-				<district>Sud-Gare</district>
-			</station>
-			<station>
-				<id>50</id>
-				<name>MOULIN DE JOUE</name>
-				<number>46</number>
-				<latitude>48.111965</latitude>
-				<longitude>-1.646047</longitude>
-				<slotsavailable>13</slotsavailable>
-				<bikesavailable>11</bikesavailable>
-				<pos>0</pos>
-				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
-			</station>
-			<station>
-				<id>51</id>
-				<name>BEAULIEU CHIMIE</name>
-				<number>47</number>
-				<latitude>48.11644</latitude>
-				<longitude>-1.633872</longitude>
-				<slotsavailable>22</slotsavailable>
-				<bikesavailable>8</bikesavailable>
-				<pos>0</pos>
-				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
 			</station>
 			<station>
 				<id>52</id>
-				<name>BEAULIEU RESTAU U.</name>
-				<number>48</number>
-				<latitude>48.122074</latitude>
-				<longitude>-1.638379</longitude>
-				<slotsavailable>25</slotsavailable>
-				<bikesavailable>4</bikesavailable>
-				<pos>0</pos>
-				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
-			</station>
-			<station>
-				<id>53</id>
-				<name>BEAULIEU BOIS PERRIN</name>
-				<number>49</number>
-				<latitude>48.11795</latitude>
-				<longitude>-1.642902</longitude>
-				<slotsavailable>20</slotsavailable>
-				<bikesavailable>9</bikesavailable>
-				<pos>0</pos>
-				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
-			</station>
-			<station>
-				<id>54</id>
-				<name>BEAULIEU INSA</name>
-				<number>50</number>
-				<latitude>48.11923</latitude>
-				<longitude>-1.635357</longitude>
-				<slotsavailable>23</slotsavailable>
-				<bikesavailable>6</bikesavailable>
-				<pos>0</pos>
-				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
-			</station>
-			<station>
-				<id>55</id>
-				<name>PONTCHAILLOU (METRO)</name>
-				<number>39</number>
-				<latitude>48.121413473016034</latitude>
-				<longitude>-1.6921520233154296</longitude>
-				<slotsavailable>19</slotsavailable>
-				<bikesavailable>9</bikesavailable>
-				<pos>0</pos>
-				<district>Villejean-Beauregard</district>
-			</station>
-			<station>
-				<id>56</id>
-				<name>VILLEJEAN-UNIVERSITE</name>
 				<number>52</number>
-				<latitude>48.12097300314612</latitude>
-				<longitude>-1.7038169503211975</longitude>
-				<slotsavailable>24</slotsavailable>
-				<bikesavailable>2</bikesavailable>
-				<pos>1</pos>
-				<district>Villejean-Beauregard</district>
-			</station>
-			<station>
-				<id>57</id>
-				<name>JF KENNEDY</name>
-				<number>53</number>
-				<latitude>48.12125</latitude>
-				<longitude>-1.712186</longitude>
+				<name>VILLEJEAN-UNIVERSITE</name>
+				<state>1</state>
+				<latitude>48.121075</latitude>
+				<longitude>-1.704122</longitude>
 				<slotsavailable>17</slotsavailable>
-				<bikesavailable>7</bikesavailable>
-				<pos>0</pos>
-				<district>Villejean-Beauregard</district>
-			</station>
-			<station>
-				<id>59</id>
-				<name>PREFECTURE</name>
-				<number>55</number>
-				<latitude>48.12826</latitude>
-				<longitude>-1.693907</longitude>
-				<slotsavailable>20</slotsavailable>
-				<bikesavailable>7</bikesavailable>
-				<pos>0</pos>
-				<district>Villejean-Beauregard</district>
-			</station>
-			<station>
-				<id>60</id>
-				<name>BERGER</name>
-				<number>56</number>
-				<latitude>48.116325</latitude>
-				<longitude>-1.705117</longitude>
-				<slotsavailable>7</slotsavailable>
-				<bikesavailable>7</bikesavailable>
-				<pos>0</pos>
-				<district>Villejean-Beauregard</district>
-			</station>
-			<station>
-				<id>61</id>
-				<name>ATALANTE CHAMPEAUX</name>
-				<number>57</number>
-				<latitude>48.116226</latitude>
-				<longitude>-1.712259</longitude>
-				<slotsavailable>22</slotsavailable>
-				<bikesavailable>7</bikesavailable>
-				<pos>0</pos>
-				<district>Bourg l'Evêque-La Touche-Moulin du Comte</district>
-			</station>
-			<station>
-				<id>62</id>
-				<name>LA HARPE</name>
-				<number>58</number>
-				<latitude>48.125607</latitude>
-				<longitude>-1.710334</longitude>
-				<slotsavailable>18</slotsavailable>
-				<bikesavailable>7</bikesavailable>
-				<pos>0</pos>
-				<district>Villejean-Beauregard</district>
-			</station>
-			<station>
-				<id>64</id>
-				<name>CUCILLE</name>
-				<number>60</number>
-				<latitude>48.128613</latitude>
-				<longitude>-1.698777</longitude>
-				<slotsavailable>18</slotsavailable>
-				<bikesavailable>7</bikesavailable>
-				<pos>0</pos>
-				<district>Villejean-Beauregard</district>
-			</station>
-			<station>
-				<id>65</id>
-				<name>JACQUES CARTIER</name>
-				<number>61</number>
-				<latitude>48.09753</latitude>
-				<longitude>-1.674237</longitude>
-				<slotsavailable>16</slotsavailable>
-				<bikesavailable>8</bikesavailable>
-				<pos>0</pos>
-				<district>Sud-Gare</district>
-			</station>
-			<station>
-				<id>66</id>
-				<name>CLEMENCEAU</name>
-				<number>62</number>
-				<latitude>48.093304</latitude>
-				<longitude>-1.674063</longitude>
-				<slotsavailable>10</slotsavailable>
-				<bikesavailable>11</bikesavailable>
-				<pos>0</pos>
-				<district>Sud-Gare</district>
-			</station>
-			<station>
-				<id>67</id>
-				<name>HENRI FREVILLE</name>
-				<number>63</number>
-				<latitude>48.08734</latitude>
-				<longitude>-1.674875</longitude>
-				<slotsavailable>10</slotsavailable>
-				<bikesavailable>14</bikesavailable>
-				<pos>1</pos>
-				<district>Bréquigny</district>
-			</station>
-			<station>
-				<id>68</id>
-				<name>ITALIE</name>
-				<number>64</number>
-				<latitude>48.086338</latitude>
-				<longitude>-1.667584</longitude>
-				<slotsavailable>11</slotsavailable>
-				<bikesavailable>5</bikesavailable>
-				<pos>0</pos>
-				<district>Le Blosne</district>
-			</station>
-			<station>
-				<id>69</id>
-				<name>LYCEE BREQUIGNY</name>
-				<number>65</number>
-				<latitude>48.08477</latitude>
-				<longitude>-1.69207</longitude>
-				<slotsavailable>13</slotsavailable>
-				<bikesavailable>7</bikesavailable>
-				<pos>0</pos>
-				<district>Bréquigny</district>
-			</station>
-			<station>
-				<id>70</id>
-				<name>PISCINE BREQUIGNY</name>
-				<number>66</number>
-				<latitude>48.08995</latitude>
-				<longitude>-1.690698</longitude>
-				<slotsavailable>23</slotsavailable>
-				<bikesavailable>1</bikesavailable>
-				<pos>0</pos>
-				<district>Bréquigny</district>
-			</station>
-			<station>
-				<id>71</id>
-				<name>BINQUENAIS</name>
-				<number>67</number>
-				<latitude>48.091557</latitude>
-				<longitude>-1.667334</longitude>
-				<slotsavailable>7</slotsavailable>
 				<bikesavailable>9</bikesavailable>
-				<pos>0</pos>
-				<district>Sud-Gare</district>
-			</station>
-			<station>
-				<id>73</id>
-				<name>CHAMPS MANCEAUX</name>
-				<number>69</number>
-				<latitude>48.091084</latitude>
-				<longitude>-1.68228</longitude>
-				<slotsavailable>14</slotsavailable>
-				<bikesavailable>4</bikesavailable>
-				<pos>0</pos>
-				<district>Bréquigny</district>
-			</station>
-			<station>
-				<id>74</id>
-				<name>MERMOZ</name>
-				<number>70</number>
-				<latitude>48.09724</latitude>
-				<longitude>-1.689098</longitude>
-				<slotsavailable>10</slotsavailable>
-				<bikesavailable>2</bikesavailable>
-				<pos>0</pos>
-				<district>Sud-Gare</district>
-			</station>
-			<station>
-				<id>75</id>
-				<name>STE THERESE</name>
-				<number>71</number>
-				<latitude>48.09719</latitude>
-				<longitude>-1.662419</longitude>
-				<slotsavailable>6</slotsavailable>
-				<bikesavailable>6</bikesavailable>
-				<pos>0</pos>
-				<district>Sud-Gare</district>
-			</station>
-			<station>
-				<id>76</id>
-				<name>Cleunay</name>
-				<number>72</number>
-				<latitude>48.1042001092919</latitude>
-				<longitude>-1.714191734790802</longitude>
-				<slotsavailable>18</slotsavailable>
-				<bikesavailable>8</bikesavailable>
-				<pos>0</pos>
-				<district>Cleunay-Arsenal-Redon</district>
-			</station>
-			<station>
-				<id>77</id>
-				<name>GENIAUX</name>
-				<number>73</number>
-				<latitude>48.10891</latitude>
-				<longitude>-1.709532</longitude>
-				<slotsavailable>4</slotsavailable>
-				<bikesavailable>10</bikesavailable>
-				<pos>0</pos>
-				<district>Cleunay-Arsenal-Redon</district>
-			</station>
-			<station>
-				<id>78</id>
-				<name>DE LESSEPS</name>
-				<number>74</number>
-				<latitude>48.100964</latitude>
-				<longitude>-1.707101</longitude>
-				<slotsavailable>18</slotsavailable>
-				<bikesavailable>6</bikesavailable>
-				<pos>0</pos>
-				<district>Cleunay-Arsenal-Redon</district>
-			</station>
-			<station>
-				<id>80</id>
-				<name>MONTS D'ARREE</name>
-				<number>76</number>
-				<latitude>48.136696</latitude>
-				<longitude>-1.666724</longitude>
-				<slotsavailable>6</slotsavailable>
-				<bikesavailable>7</bikesavailable>
-				<pos>0</pos>
-				<district>Maurepas - Patton</district>
+				<pos>1</pos>
+				<district>Villejean-Beauregard</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
 			</station>
 			<station>
 				<id>81</id>
-				<name>HOUX CITE U</name>
-				<number>77</number>
-				<latitude>48.130848</latitude>
-				<longitude>-1.664219</longitude>
-				<slotsavailable>6</slotsavailable>
-				<bikesavailable>10</bikesavailable>
+				<number>81</number>
+				<name>TURMEL</name>
+				<state>1</state>
+				<latitude>48.122475</latitude>
+				<longitude>-1.651089</longitude>
+				<slotsavailable>4</slotsavailable>
+				<bikesavailable>12</bikesavailable>
 				<pos>0</pos>
 				<district>Maurepas - Patton</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
 			</station>
 			<station>
-				<id>82</id>
-				<name>GROS CHENE</name>
-				<number>78</number>
-				<latitude>48.1268</latitude>
-				<longitude>-1.665115</longitude>
+				<id>12</id>
+				<number>12</number>
+				<name>TNB</name>
+				<state>1</state>
+				<latitude>48.107697</latitude>
+				<longitude>-1.673695</longitude>
 				<slotsavailable>12</slotsavailable>
+				<bikesavailable>15</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>71</id>
+				<number>71</number>
+				<name>STE THERESE</name>
+				<state>1</state>
+				<latitude>48.094994</latitude>
+				<longitude>-1.663705</longitude>
+				<slotsavailable>2</slotsavailable>
+				<bikesavailable>9</bikesavailable>
+				<pos>0</pos>
+				<district>Sud-Gare</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>5</id>
+				<number>5</number>
+				<name>SAINTE ANNE</name>
+				<state>1</state>
+				<latitude>48.11451</latitude>
+				<longitude>-1.680984</longitude>
+				<slotsavailable>11</slotsavailable>
+				<bikesavailable>13</bikesavailable>
+				<pos>1</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>9</id>
+				<number>9</number>
+				<name>SAINT GEORGES</name>
+				<state>1</state>
+				<latitude>48.112385</latitude>
+				<longitude>-1.674417</longitude>
+				<slotsavailable>15</slotsavailable>
+				<bikesavailable>3</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>23</id>
+				<number>23</number>
+				<name>ROTONDE</name>
+				<state>1</state>
+				<latitude>48.106663</latitude>
+				<longitude>-1.686713</longitude>
+				<slotsavailable>13</slotsavailable>
 				<bikesavailable>6</bikesavailable>
 				<pos>0</pos>
-				<district>Maurepas - Patton</district>
+				<district>Cleunay-Arsenal-Redon</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
 			</station>
 			<station>
-				<id>83</id>
-				<name>GAST</name>
-				<number>79</number>
-				<latitude>48.131077</latitude>
-				<longitude>-1.6565</longitude>
+				<id>1</id>
+				<number>1</number>
+				<name>REPUBLIQUE</name>
+				<state>1</state>
+				<latitude>48.10999</latitude>
+				<longitude>-1.678027</longitude>
+				<slotsavailable>8</slotsavailable>
+				<bikesavailable>21</bikesavailable>
+				<pos>1</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>8</id>
+				<number>8</number>
+				<name>RECTORAT</name>
+				<state>1</state>
+				<latitude>48.119396</latitude>
+				<longitude>-1.67445</longitude>
+				<slotsavailable>3</slotsavailable>
+				<bikesavailable>15</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>55</id>
+				<number>55</number>
+				<name>PREFECTURE</name>
+				<state>1</state>
+				<latitude>48.128407</latitude>
+				<longitude>-1.693916</longitude>
 				<slotsavailable>14</slotsavailable>
-				<bikesavailable>5</bikesavailable>
+				<bikesavailable>13</bikesavailable>
+				<pos>0</pos>
+				<district>Villejean-Beauregard</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>39</id>
+				<number>39</number>
+				<name>PONTCHAILLOU (METRO)</name>
+				<state>1</state>
+				<latitude>48.12149</latitude>
+				<longitude>-1.692816</longitude>
+				<slotsavailable>18</slotsavailable>
+				<bikesavailable>10</bikesavailable>
+				<pos>0</pos>
+				<district>Villejean-Beauregard</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>42</id>
+				<number>42</number>
+				<name>PONT DE STRASBOURG</name>
+				<state>1</state>
+				<latitude>48.109756</latitude>
+				<longitude>-1.656451</longitude>
+				<slotsavailable>13</slotsavailable>
+				<bikesavailable>2</bikesavailable>
+				<pos>0</pos>
+				<district>Thabor - St HÃ©lier</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>20</id>
+				<number>20</number>
+				<name>PONT DE NANTES</name>
+				<state>1</state>
+				<latitude>48.102016</latitude>
+				<longitude>-1.683961</longitude>
+				<slotsavailable>11</slotsavailable>
+				<bikesavailable>9</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>35</id>
+				<number>35</number>
+				<name>PONT DE CHATEAUDUN</name>
+				<state>1</state>
+				<latitude>48.11031</latitude>
+				<longitude>-1.663955</longitude>
+				<slotsavailable>13</slotsavailable>
+				<bikesavailable>9</bikesavailable>
+				<pos>0</pos>
+				<district>Thabor - St HÃ©lier</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>19</id>
+				<number>19</number>
+				<name>PLELO COLOMBIER</name>
+				<state>1</state>
+				<latitude>48.105907</latitude>
+				<longitude>-1.681306</longitude>
+				<slotsavailable>7</slotsavailable>
+				<bikesavailable>18</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>4</id>
+				<number>4</number>
+				<name>PLACE HOCHE</name>
+				<state>1</state>
+				<latitude>48.115074</latitude>
+				<longitude>-1.677062</longitude>
+				<slotsavailable>9</slotsavailable>
+				<bikesavailable>15</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>24</id>
+				<number>24</number>
+				<name>PLACE DE BRETAGNE</name>
+				<state>1</state>
+				<latitude>48.109657</latitude>
+				<longitude>-1.68402</longitude>
+				<slotsavailable>9</slotsavailable>
+				<bikesavailable>11</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>59</id>
+				<number>59</number>
+				<name>PISCINE GAYEULLES</name>
+				<state>1</state>
+				<latitude>48.134563</latitude>
+				<longitude>-1.65156</longitude>
+				<slotsavailable>24</slotsavailable>
+				<bikesavailable>2</bikesavailable>
 				<pos>0</pos>
 				<district>Maurepas - Patton</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
 			</station>
 			<station>
-				<id>84</id>
-				<name>PAINLEVE</name>
+				<id>66</id>
+				<number>66</number>
+				<name>PISCINE BREQUIGNY</name>
+				<state>1</state>
+				<latitude>48.089664</latitude>
+				<longitude>-1.690234</longitude>
+				<slotsavailable>9</slotsavailable>
+				<bikesavailable>15</bikesavailable>
+				<pos>0</pos>
+				<district>BrÃ©quigny</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>40</id>
+				<number>40</number>
+				<name>PIERRE MARTIN</name>
+				<state>1</state>
+				<latitude>48.103497</latitude>
+				<longitude>-1.662321</longitude>
+				<slotsavailable>14</slotsavailable>
+				<bikesavailable>6</bikesavailable>
+				<pos>0</pos>
+				<district>Francisco Ferrer-Vern-Poterie</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>36</id>
+				<number>36</number>
+				<name>PAUL BERT</name>
+				<state>1</state>
+				<latitude>48.110115</latitude>
+				<longitude>-1.670039</longitude>
+				<slotsavailable>11</slotsavailable>
+				<bikesavailable>5</bikesavailable>
+				<pos>0</pos>
+				<district>Thabor - St HÃ©lier</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>80</id>
 				<number>80</number>
-				<latitude>48.122993</latitude>
-				<longitude>-1.660505</longitude>
+				<name>PAINLEVE</name>
+				<state>1</state>
+				<latitude>48.12302</latitude>
+				<longitude>-1.660502</longitude>
+				<slotsavailable>9</slotsavailable>
+				<bikesavailable>9</bikesavailable>
+				<pos>0</pos>
+				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>25</id>
+				<number>25</number>
+				<name>OFFICE DE TOURISME</name>
+				<state>1</state>
+				<latitude>48.110294</latitude>
+				<longitude>-1.683107</longitude>
+				<slotsavailable>2</slotsavailable>
+				<bikesavailable>8</bikesavailable>
+				<pos>1</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>22</id>
+				<number>22</number>
+				<name>OBERTHUR</name>
+				<state>1</state>
+				<latitude>48.11351</latitude>
+				<longitude>-1.66184</longitude>
+				<slotsavailable>11</slotsavailable>
+				<bikesavailable>9</bikesavailable>
+				<pos>0</pos>
+				<district>Thabor - St HÃ©lier</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>10</id>
+				<number>10</number>
+				<name>MUSEE BEAUX ARTS</name>
+				<state>1</state>
+				<latitude>48.109573</latitude>
+				<longitude>-1.674072</longitude>
+				<slotsavailable>8</slotsavailable>
+				<bikesavailable>8</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>46</id>
+				<number>46</number>
+				<name>MOULIN DE JOUE</name>
+				<state>1</state>
+				<latitude>48.112038</latitude>
+				<longitude>-1.645745</longitude>
+				<slotsavailable>15</slotsavailable>
+				<bikesavailable>9</bikesavailable>
+				<pos>0</pos>
+				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>76</id>
+				<number>76</number>
+				<name>MONTS D'ARREE</name>
+				<state>1</state>
+				<latitude>48.1367</latitude>
+				<longitude>-1.666673</longitude>
+				<slotsavailable>6</slotsavailable>
+				<bikesavailable>7</bikesavailable>
+				<pos>0</pos>
+				<district>Maurepas - Patton</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>44</id>
+				<number>44</number>
+				<name>METZ SEVIGNE</name>
+				<state>1</state>
+				<latitude>48.115967</latitude>
+				<longitude>-1.65826</longitude>
+				<slotsavailable>8</slotsavailable>
+				<bikesavailable>8</bikesavailable>
+				<pos>0</pos>
+				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>70</id>
+				<number>70</number>
+				<name>MERMOZ</name>
+				<state>1</state>
+				<latitude>48.097942</latitude>
+				<longitude>-1.688113</longitude>
+				<slotsavailable>6</slotsavailable>
+				<bikesavailable>6</bikesavailable>
+				<pos>0</pos>
+				<district>Sud-Gare</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>38</id>
+				<number>38</number>
+				<name>MARBEUF</name>
+				<state>1</state>
+				<latitude>48.111725</latitude>
+				<longitude>-1.702033</longitude>
+				<slotsavailable>8</slotsavailable>
+				<bikesavailable>12</bikesavailable>
+				<pos>0</pos>
+				<district>Bourg l'EvÃªque-La Touche-Moulin du Comte</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>31</id>
+				<number>31</number>
+				<name>MALAKOFF</name>
+				<state>1</state>
+				<latitude>48.105255</latitude>
+				<longitude>-1.692976</longitude>
+				<slotsavailable>9</slotsavailable>
+				<bikesavailable>7</bikesavailable>
+				<pos>0</pos>
+				<district>Cleunay-Arsenal-Redon</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>2</id>
+				<number>2</number>
+				<name>MAIRIE</name>
+				<state>1</state>
+				<latitude>48.111626</latitude>
+				<longitude>-1.678745</longitude>
+				<slotsavailable>14</slotsavailable>
+				<bikesavailable>10</bikesavailable>
+				<pos>1</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>65</id>
+				<number>65</number>
+				<name>LYCEE BREQUIGNY</name>
+				<state>1</state>
+				<latitude>48.08485</latitude>
+				<longitude>-1.691921</longitude>
+				<slotsavailable>6</slotsavailable>
+				<bikesavailable>13</bikesavailable>
+				<pos>0</pos>
+				<district>BrÃ©quigny</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>11</id>
+				<number>11</number>
+				<name>LIBERTE</name>
+				<state>1</state>
+				<latitude>48.107513</latitude>
+				<longitude>-1.678163</longitude>
+				<slotsavailable>7</slotsavailable>
+				<bikesavailable>17</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>26</id>
+				<number>26</number>
+				<name>LES LICES</name>
+				<state>1</state>
+				<latitude>48.112766</latitude>
+				<longitude>-1.685036</longitude>
+				<slotsavailable>6</slotsavailable>
+				<bikesavailable>14</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>21</id>
+				<number>21</number>
+				<name>LES HALLES</name>
+				<state>1</state>
+				<latitude>48.10766</latitude>
+				<longitude>-1.680087</longitude>
+				<slotsavailable>7</slotsavailable>
+				<bikesavailable>9</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>14</id>
+				<number>14</number>
+				<name>LAENNEC</name>
+				<state>1</state>
+				<latitude>48.10685</latitude>
+				<longitude>-1.665818</longitude>
+				<slotsavailable>7</slotsavailable>
+				<bikesavailable>9</bikesavailable>
+				<pos>0</pos>
+				<district>Thabor - St HÃ©lier</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>32</id>
+				<number>32</number>
+				<name>LA TOUCHE</name>
+				<state>1</state>
+				<latitude>48.116608</latitude>
+				<longitude>-1.690943</longitude>
+				<slotsavailable>5</slotsavailable>
+				<bikesavailable>11</bikesavailable>
+				<pos>0</pos>
+				<district>Bourg l'EvÃªque-La Touche-Moulin du Comte</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>58</id>
+				<number>58</number>
+				<name>LA HARPE</name>
+				<state>1</state>
+				<latitude>48.12557</latitude>
+				<longitude>-1.71029</longitude>
+				<slotsavailable>12</slotsavailable>
+				<bikesavailable>13</bikesavailable>
+				<pos>0</pos>
+				<district>Villejean-Beauregard</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>29</id>
+				<number>29</number>
+				<name>JULES FERRY</name>
+				<state>1</state>
+				<latitude>48.121384</latitude>
+				<longitude>-1.671111</longitude>
+				<slotsavailable>14</slotsavailable>
+				<bikesavailable>2</bikesavailable>
+				<pos>0</pos>
+				<district>Maurepas - Patton</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>53</id>
+				<number>53</number>
+				<name>JF KENNEDY</name>
+				<state>1</state>
+				<latitude>48.12153</latitude>
+				<longitude>-1.711088</longitude>
+				<slotsavailable>12</slotsavailable>
+				<bikesavailable>11</bikesavailable>
+				<pos>0</pos>
+				<district>Villejean-Beauregard</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>61</id>
+				<number>61</number>
+				<name>JACQUES CARTIER</name>
+				<state>1</state>
+				<latitude>48.097534</latitude>
+				<longitude>-1.674305</longitude>
+				<slotsavailable>6</slotsavailable>
+				<bikesavailable>18</bikesavailable>
+				<pos>0</pos>
+				<district>Sud-Gare</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>64</id>
+				<number>64</number>
+				<name>ITALIE</name>
+				<state>1</state>
+				<latitude>48.08677</latitude>
+				<longitude>-1.667567</longitude>
+				<slotsavailable>10</slotsavailable>
+				<bikesavailable>6</bikesavailable>
+				<pos>0</pos>
+				<district>Le Blosne</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>77</id>
+				<number>77</number>
+				<name>HOUX CITE U</name>
+				<state>1</state>
+				<latitude>48.13051</latitude>
+				<longitude>-1.66313</longitude>
+				<slotsavailable>12</slotsavailable>
+				<bikesavailable>4</bikesavailable>
+				<pos>0</pos>
+				<district>Maurepas - Patton</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>6</id>
+				<number>6</number>
+				<name>HOTEL DIEU</name>
+				<state>1</state>
+				<latitude>48.117596</latitude>
+				<longitude>-1.677851</longitude>
+				<slotsavailable>23</slotsavailable>
+				<bikesavailable>3</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>27</id>
+				<number>27</number>
+				<name>HORIZONS</name>
+				<state>1</state>
+				<latitude>48.11206</latitude>
+				<longitude>-1.688515</longitude>
+				<slotsavailable>3</slotsavailable>
+				<bikesavailable>11</bikesavailable>
+				<pos>0</pos>
+				<district>Bourg l'EvÃªque-La Touche-Moulin du Comte</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>63</id>
+				<number>63</number>
+				<name>HENRI FREVILLE</name>
+				<state>1</state>
+				<latitude>48.087296</latitude>
+				<longitude>-1.67485</longitude>
+				<slotsavailable>9</slotsavailable>
+				<bikesavailable>15</bikesavailable>
+				<pos>1</pos>
+				<district>BrÃ©quigny</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>78</id>
+				<number>78</number>
+				<name>GROS CHENE</name>
+				<state>1</state>
+				<latitude>48.126823</latitude>
+				<longitude>-1.665083</longitude>
+				<slotsavailable>9</slotsavailable>
+				<bikesavailable>9</bikesavailable>
+				<pos>0</pos>
+				<district>Maurepas - Patton</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>73</id>
+				<number>73</number>
+				<name>GENIAUX</name>
+				<state>1</state>
+				<latitude>48.108936</latitude>
+				<longitude>-1.709452</longitude>
+				<slotsavailable>2</slotsavailable>
+				<bikesavailable>12</bikesavailable>
+				<pos>0</pos>
+				<district>Cleunay-Arsenal-Redon</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>79</id>
+				<number>79</number>
+				<name>GAST</name>
+				<state>1</state>
+				<latitude>48.13129</latitude>
+				<longitude>-1.656476</longitude>
+				<slotsavailable>17</slotsavailable>
+				<bikesavailable>3</bikesavailable>
+				<pos>0</pos>
+				<district>Maurepas - Patton</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>45</id>
+				<number>45</number>
+				<name>GARES (SUD)</name>
+				<state>1</state>
+				<latitude>48.102257</latitude>
+				<longitude>-1.673103</longitude>
+				<slotsavailable>16</slotsavailable>
+				<bikesavailable>4</bikesavailable>
+				<pos>0</pos>
+				<district>Sud-Gare</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>15</id>
+				<number>15</number>
+				<name>GARES (NORD)</name>
+				<state>1</state>
+				<latitude>48.104088</latitude>
+				<longitude>-1.672139</longitude>
+				<slotsavailable>21</slotsavailable>
+				<bikesavailable>24</bikesavailable>
+				<pos>1</pos>
+				<district>Thabor - St HÃ©lier</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>7</id>
+				<number>7</number>
+				<name>FAC DE DROIT</name>
+				<state>1</state>
+				<latitude>48.11817</latitude>
+				<longitude>-1.670735</longitude>
+				<slotsavailable>25</slotsavailable>
+				<bikesavailable>1</bikesavailable>
+				<pos>0</pos>
+				<district>Thabor - St HÃ©lier</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>30</id>
+				<number>30</number>
+				<name>DUCHESSE ANNE</name>
+				<state>1</state>
+				<latitude>48.11953</latitude>
+				<longitude>-1.667023</longitude>
+				<slotsavailable>8</slotsavailable>
+				<bikesavailable>8</bikesavailable>
+				<pos>0</pos>
+				<district>Thabor - St HÃ©lier</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>13</id>
+				<number>13</number>
+				<name>DINAN</name>
+				<state>1</state>
+				<latitude>48.117214</latitude>
+				<longitude>-1.682698</longitude>
+				<slotsavailable>5</slotsavailable>
+				<bikesavailable>11</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>74</id>
+				<number>74</number>
+				<name>DE LESSEPS</name>
+				<state>1</state>
+				<latitude>48.10091</latitude>
+				<longitude>-1.707072</longitude>
+				<slotsavailable>13</slotsavailable>
+				<bikesavailable>11</bikesavailable>
+				<pos>0</pos>
+				<district>Cleunay-Arsenal-Redon</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>18</id>
+				<number>18</number>
+				<name>DALLE DU COLOMBIER</name>
+				<state>1</state>
+				<latitude>48.105118</latitude>
+				<longitude>-1.678678</longitude>
+				<slotsavailable>11</slotsavailable>
+				<bikesavailable>8</bikesavailable>
+				<pos>1</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>60</id>
+				<number>60</number>
+				<name>CUCILLE</name>
+				<state>1</state>
+				<latitude>48.128803</latitude>
+				<longitude>-1.698018</longitude>
+				<slotsavailable>11</slotsavailable>
+				<bikesavailable>14</bikesavailable>
+				<pos>0</pos>
+				<district>Villejean-Beauregard</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>72</id>
+				<number>72</number>
+				<name>CLEUNAY</name>
+				<state>1</state>
+				<latitude>48.10421</latitude>
+				<longitude>-1.71263</longitude>
+				<slotsavailable>8</slotsavailable>
+				<bikesavailable>18</bikesavailable>
+				<pos>0</pos>
+				<district>Cleunay-Arsenal-Redon</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>62</id>
+				<number>62</number>
+				<name>CLEMENCEAU</name>
+				<state>1</state>
+				<latitude>48.093285</latitude>
+				<longitude>-1.674116</longitude>
+				<slotsavailable>14</slotsavailable>
+				<bikesavailable>8</bikesavailable>
+				<pos>0</pos>
+				<district>Sud-Gare</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>43</id>
+				<number>43</number>
+				<name>CITE JUDICIAIRE</name>
+				<state>1</state>
+				<latitude>48.104816</latitude>
+				<longitude>-1.68411</longitude>
+				<slotsavailable>15</slotsavailable>
+				<bikesavailable>9</bikesavailable>
+				<pos>0</pos>
+				<district>Cleunay-Arsenal-Redon</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>41</id>
+				<number>41</number>
+				<name>CIMETIERE EST</name>
+				<state>1</state>
+				<latitude>48.10433</latitude>
+				<longitude>-1.650099</longitude>
+				<slotsavailable>10</slotsavailable>
+				<bikesavailable>8</bikesavailable>
+				<pos>0</pos>
+				<district>Francisco Ferrer-Vern-Poterie</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>28</id>
+				<number>28</number>
+				<name>CHEQUES POSTAUX</name>
+				<state>1</state>
+				<latitude>48.10888</latitude>
+				<longitude>-1.693359</longitude>
+				<slotsavailable>6</slotsavailable>
+				<bikesavailable>8</bikesavailable>
+				<pos>0</pos>
+				<district>Bourg l'EvÃªque-La Touche-Moulin du Comte</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>17</id>
+				<number>17</number>
+				<name>CHARLES DE GAULLE</name>
+				<state>1</state>
+				<latitude>48.10511</latitude>
+				<longitude>-1.677122</longitude>
+				<slotsavailable>16</slotsavailable>
+				<bikesavailable>8</bikesavailable>
+				<pos>0</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>69</id>
+				<number>69</number>
+				<name>CHAMPS MANCEAUX</name>
+				<state>1</state>
+				<latitude>48.091145</latitude>
+				<longitude>-1.682269</longitude>
+				<slotsavailable>0</slotsavailable>
+				<bikesavailable>18</bikesavailable>
+				<pos>0</pos>
+				<district>BrÃ©quigny</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>16</id>
+				<number>16</number>
+				<name>CHAMPS LIBRES</name>
+				<state>1</state>
+				<latitude>48.10553</latitude>
+				<longitude>-1.674394</longitude>
+				<slotsavailable>4</slotsavailable>
+				<bikesavailable>20</bikesavailable>
+				<pos>1</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>3</id>
+				<number>3</number>
+				<name>CHAMPS JACQUET</name>
+				<state>1</state>
+				<latitude>48.112804</latitude>
+				<longitude>-1.680054</longitude>
+				<slotsavailable>14</slotsavailable>
+				<bikesavailable>10</bikesavailable>
+				<pos>1</pos>
+				<district>Centre-Ville</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>34</id>
+				<number>34</number>
+				<name>BREST VERDUN</name>
+				<state>1</state>
+				<latitude>48.113014</latitude>
+				<longitude>-1.693273</longitude>
+				<slotsavailable>10</slotsavailable>
+				<bikesavailable>5</bikesavailable>
+				<pos>0</pos>
+				<district>Bourg l'EvÃªque-La Touche-Moulin du Comte</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>51</id>
+				<number>51</number>
+				<name>BOUZAT</name>
+				<state>1</state>
+				<latitude>48.12873</latitude>
+				<longitude>-1.635132</longitude>
 				<slotsavailable>14</slotsavailable>
 				<bikesavailable>4</bikesavailable>
 				<pos>0</pos>
 				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
 			</station>
 			<station>
-				<id>85</id>
-				<name>TURMEL</name>
-				<number>81</number>
-				<latitude>48.122288</latitude>
-				<longitude>-1.650886</longitude>
-				<slotsavailable>9</slotsavailable>
-				<bikesavailable>7</bikesavailable>
+				<id>67</id>
+				<number>67</number>
+				<name>BINQUENAIS</name>
+				<state>1</state>
+				<latitude>48.091568</latitude>
+				<longitude>-1.6673</longitude>
+				<slotsavailable>8</slotsavailable>
+				<bikesavailable>8</bikesavailable>
 				<pos>0</pos>
-				<district>Maurepas - Patton</district>
+				<district>Sud-Gare</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
 			</station>
 			<station>
-				<id>87</id>
-				<name>BOUZAT</name>
-				<number>51</number>
-				<latitude>48.128723</latitude>
-				<longitude>-1.635133</longitude>
-				<slotsavailable>12</slotsavailable>
-				<bikesavailable>6</bikesavailable>
+				<id>56</id>
+				<number>56</number>
+				<name>BERGER</name>
+				<state>1</state>
+				<latitude>48.11629</latitude>
+				<longitude>-1.705127</longitude>
+				<slotsavailable>13</slotsavailable>
+				<bikesavailable>1</bikesavailable>
+				<pos>0</pos>
+				<district>Villejean-Beauregard</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>48</id>
+				<number>48</number>
+				<name>BEAULIEU RESTAU U.</name>
+				<state>1</state>
+				<latitude>48.12195</latitude>
+				<longitude>-1.638313</longitude>
+				<slotsavailable>17</slotsavailable>
+				<bikesavailable>12</bikesavailable>
 				<pos>0</pos>
 				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
 			</station>
 			<station>
-				<id>88</id>
-				<name>PISCINE GAYEULLES</name>
-				<number>59</number>
-				<latitude>48.134563</latitude>
-				<longitude>-1.651601</longitude>
-				<slotsavailable>15</slotsavailable>
-				<bikesavailable>11</bikesavailable>
+				<id>50</id>
+				<number>50</number>
+				<name>BEAULIEU INSA</name>
+				<state>1</state>
+				<latitude>48.118954</latitude>
+				<longitude>-1.635186</longitude>
+				<slotsavailable>22</slotsavailable>
+				<bikesavailable>7</bikesavailable>
 				<pos>0</pos>
-				<district>Maurepas - Patton</district>
+				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
 			</station>
 			<station>
-				<id>89</id>
-				<name>ZAC SAINT SULPICE</name>
-				<number>75</number>
-				<latitude>48.132103</latitude>
-				<longitude>-1.635246</longitude>
+				<id>47</id>
+				<number>47</number>
+				<name>BEAULIEU CHIMIE</name>
+				<state>1</state>
+				<latitude>48.116455</latitude>
+				<longitude>-1.633916</longitude>
+				<slotsavailable>26</slotsavailable>
+				<bikesavailable>4</bikesavailable>
+				<pos>0</pos>
+				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>49</id>
+				<number>49</number>
+				<name>BEAULIEU BOIS PERRIN</name>
+				<state>1</state>
+				<latitude>48.11795</latitude>
+				<longitude>-1.642867</longitude>
 				<slotsavailable>24</slotsavailable>
 				<bikesavailable>6</bikesavailable>
 				<pos>0</pos>
-				<district>Maurepas - Patton</district>
+				<district>Jeanne d'Arc-Longs Champs-Atalante</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>37</id>
+				<number>37</number>
+				<name>AUBERGE DE JEUNESSE</name>
+				<state>1</state>
+				<latitude>48.120857</latitude>
+				<longitude>-1.681836</longitude>
+				<slotsavailable>14</slotsavailable>
+				<bikesavailable>4</bikesavailable>
+				<pos>0</pos>
+				<district>St Martin</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>57</id>
+				<number>57</number>
+				<name>ATALANTE CHAMPEAUX</name>
+				<state>1</state>
+				<latitude>48.11607</latitude>
+				<longitude>-1.713711</longitude>
+				<slotsavailable>13</slotsavailable>
+				<bikesavailable>17</bikesavailable>
+				<pos>0</pos>
+				<district>Bourg l'EvÃªque-La Touche-Moulin du Comte</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>33</id>
+				<number>33</number>
+				<name>ANATOLE FRANCE</name>
+				<state>1</state>
+				<latitude>48.117985</latitude>
+				<longitude>-1.686405</longitude>
+				<slotsavailable>7</slotsavailable>
+				<bikesavailable>7</bikesavailable>
+				<pos>0</pos>
+				<district>Bourg l'EvÃªque-La Touche-Moulin du Comte</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
+			</station>
+			<station>
+				<id>68</id>
+				<number>68</number>
+				<name>ALMA</name>
+				<state>1</state>
+				<latitude>48.082397</latitude>
+				<longitude>-1.677634</longitude>
+				<slotsavailable>11</slotsavailable>
+				<bikesavailable>19</bikesavailable>
+				<pos>0</pos>
+				<district>BrÃ©quigny</district>
+				<lastupdate>2010-06-12T16:53:05+02:00</lastupdate>
 			</station>
 		</data>
 	</answer>
-</apikr>
+</opendata>

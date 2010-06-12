@@ -7,7 +7,7 @@ require 'mocha'
  
 class TestVeloStarParse < Test::Unit::TestCase
   Test_file = 'data_full.xml'
-  Test_file_nb_stations = 79
+  Test_file_nb_stations = 80
   def test_global_parsing
     parser = VeloStar::Parse.new
     ret = parser.parse_stations File.open Test_file

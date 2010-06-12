@@ -6,7 +6,7 @@ module VeloStar
   class Parse
     def parse_stations fh
       doc = Hpricot.parse fh
-      doc.search("/apikr/answer/data/station").collect do|el|
+      doc.search("/opendata/answer/data/station").collect do|el|
         {
           :id => el.search("number")[0].innerText,
           :latitude => el.search("latitude")[0].innerText.to_f,
