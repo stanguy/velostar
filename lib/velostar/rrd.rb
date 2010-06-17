@@ -1,15 +1,16 @@
 
 module VeloStar
   class Rrd
+    Default_RRA = [ "RRA:AVERAGE:0.5:1:2016" ]
     def initialize basedir
       @basedir = basedir
     end
     def get_filename id
       "#{@basedir}#{id}.rrd"
     end
-    def create id
+    def create id, rra = Default_RRA
       filename = get_filename id
-      system "rrdtool create #{get_filename id} DS:slots:GAUGE:600:0:50 DS:bikes:GAUGE:600:0:50 RRA:AVERAGE:0.5:1:2016"
+      system "rrdtool create #{get_filename id} DS:slots:GAUGE:600:0:50 DS:bikes:GAUGE:600:0:50 #{rra.join ' '}"
     end
     def update id, slots, bikes
       system "rrdtool update -t slots:bikes #{get_filename id} N:#{slots}:#{bikes}"

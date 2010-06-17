@@ -20,6 +20,11 @@ remote_data = api.getstation
 parser = VeloStar::Parse.new
 list_of_stations = parser.parse_stations remote_data
 
+
+RRA = [
+       "RRA:AVERAGE:0.5:1:2016" # 1 week full resolution       
+      ]
+
 rrd = VeloStar::Rrd.new RRD_BASEDIR
 list_of_stations.each do|station|
   if not File.exists?( rrd.get_filename( station[:id] ) ) then
