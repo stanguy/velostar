@@ -19,7 +19,7 @@ class TestVeloStarParse < Test::Unit::TestCase
       assert_kind_of Float, s[:latitude]
       assert s.has_key?(:slots), "no slots entry"
       assert_kind_of Integer, s[:slots]
-      assert s.has_key?(:bikes), "no nikes entry"
+      assert s.has_key?(:bikes), "no bikes entry"
       assert s.has_key?(:has_pos?), "no has_pos? entry"
       assert((s[:has_pos?] === true || s[:has_pos?] === false), "pos is boolean")
     end
