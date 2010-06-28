@@ -11,6 +11,7 @@ if not defined? RRD_BASEDIR then
   exit 2
 end
 
+require 'rubygems' # if hpricot, for example, is not standard
 require 'velostar/parse'
 require 'velostar/rrd'
 require 'velostar/api'
