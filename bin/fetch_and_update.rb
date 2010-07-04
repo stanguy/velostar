@@ -37,7 +37,7 @@ end
 rrd = VeloStar::Rrd.new RRD_BASEDIR, rrdpath
 list_of_stations.each do|station|
   if not File.exists?( rrd.get_filename( station[:id] ) ) then
-    rrd.create station[:id]
+    rrd.create station[:id], RRA
   end
   rrd.update station[:id], station[:slots], station[:bikes]
 end
