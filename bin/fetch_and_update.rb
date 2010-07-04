@@ -28,7 +28,13 @@ RRA = [
        "RRA:AVERAGE:0.5:72:730" # 6 months of quarter days
       ]
 
-rrd = VeloStar::Rrd.new RRD_BASEDIR
+if defined? RRD_PATH then
+  rrdpath = RRD_PATH
+else
+  rrdpath = VeloStar::Rrd::Default_RRDTOOL_path
+end
+
+rrd = VeloStar::Rrd.new RRD_BASEDIR, rrdpath
 list_of_stations.each do|station|
   if not File.exists?( rrd.get_filename( station[:id] ) ) then
     rrd.create station[:id]
