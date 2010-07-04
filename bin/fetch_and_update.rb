@@ -23,7 +23,9 @@ list_of_stations = parser.parse_stations remote_data
 
 
 RRA = [
-       "RRA:AVERAGE:0.5:1:2016" # 1 week full resolution       
+       "RRA:AVERAGE:0.5:1:2016" # 1 week full resolution
+       "RRA:AVERAGE:0.5:12:720" # 1 month hourly 
+       "RRA:AVERAGE:0.5:72:730" # 6 months of quarter days
       ]
 
 rrd = VeloStar::Rrd.new RRD_BASEDIR
