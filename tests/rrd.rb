@@ -9,6 +9,7 @@ class TestVeloStarRrd < Test::Unit::TestCase
   Test_id = 12
   Basedir = '/tmp/'
   Test_timestart = 1267655513
+  Test_path = "testpath"
   def test_filename
     rrd = VeloStar::Rrd.new Basedir
     assert_equal "#{Basedir}#{Test_id}.rrd", rrd.get_filename( Test_id )
@@ -45,4 +46,10 @@ class TestVeloStarRrd < Test::Unit::TestCase
                 ).with("rrdtool fetch #{Basedir}#{Test_id}.rrd -s #{Test_timestart} AVERAGE").once.returns("   slots   bikes\n\n1267804800: 2.8134873133e+01 1.8651268667e+001267805100: 3.0000000000e+01 0.0000000000e+00\n1267805400: 3.0000000000e+01 0.0000000000e+00\n")
     ret = rrd.fetch( Test_id, Test_timestart )
   end
+  def test_create_with_different_path()
+    rrd = VeloStar::Rrd.new Basedir, Test_path
+    rrd.expects(:system).with("#{Test_path} create #{Basedir}#{Test_id}.rrd DS:slots:GAUGE:600:0:50 DS:bikes:GAUGE:600:0:50 RRA:AVERAGE:0.5:1:2016").once
+    rrd.create( Test_id )
+  end
+      
 end

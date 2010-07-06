@@ -11,6 +11,7 @@ if not defined? RRD_BASEDIR then
   exit 2
 end
 
+require 'rubygems' # if hpricot, for example, is not standard
 require 'velostar/parse'
 require 'velostar/rrd'
 require 'velostar/api'
@@ -22,13 +23,21 @@ list_of_stations = parser.parse_stations remote_data
 
 
 RRA = [
-       "RRA:AVERAGE:0.5:1:2016" # 1 week full resolution       
+       "RRA:AVERAGE:0.5:1:2016", # 1 week full resolution
+       "RRA:AVERAGE:0.5:12:720", # 1 month hourly 
+       "RRA:AVERAGE:0.5:72:730" # 6 months of quarter days
       ]
 
-rrd = VeloStar::Rrd.new RRD_BASEDIR
+if defined? RRD_PATH then
+  rrdpath = RRD_PATH
+else
+  rrdpath = VeloStar::Rrd::Default_RRDTOOL_path
+end
+
+rrd = VeloStar::Rrd.new RRD_BASEDIR, rrdpath
 list_of_stations.each do|station|
   if not File.exists?( rrd.get_filename( station[:id] ) ) then
-    rrd.create station[:id]
+    rrd.create station[:id], RRA
   end
   rrd.update station[:id], station[:slots], station[:bikes]
 end
