@@ -28,6 +28,8 @@ jQuery.veloStar = {
             jQuery.each( data.opendata.answer.data.station, function( idx, v ) {
                 v.latitude = parseFloat( v.latitude );
                 v.longitude = parseFloat( v.longitude );
+                v.bikesavailable = parseInt( v.bikesavailable );
+                v.slotsavailable = parseInt( v.slotsavailable );
             } );
         }
         return data;
@@ -164,7 +166,7 @@ jQuery.veloStar = {
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
-    drawCircleFromBoudingBox: function( map, bl, tr, title ) {
+    drawCircleFromBoudingBox: function( map, bl, tr, opts ) {
         var center = {
             latitude: ( bl.latitude + tr.latitude ) / 2,
             longitude: ( bl.longitude + tr.longitude ) / 2
@@ -180,18 +182,23 @@ jQuery.veloStar = {
             map: map,
             position: center_on_map,
             draggable: true,
-            title: title
+            title: opts.title
         } );
 
-        // Add a Circle overlay to the map
-        var circle = new google.maps.Circle( {
+        var circle_options = {
             map: map,
-            'radius': radius
-        } );
+            'radius': radius,
+            fillColor: '#FF0000',
+            strikeColor: '#FF0000'
+        } ;
+        jQuery.extend( circle_options, opts );
+        
+        // Add a Circle overlay to the map
+        var circle = new google.maps.Circle( circle_options );
 
         // Bind this Circle's center to the Marker's position
         circle.bindTo( 'center', marker, 'position' );
-
+        return marker;
     }
 
 };
