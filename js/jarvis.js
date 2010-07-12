@@ -7,6 +7,12 @@
  * (that is, the smallest angle between the last hull segment and the line 
  * formed with the point we test). We halt when we have reached the
  * first point.
+ * 
+ * Some of the code was mishandled here and originates from:
+ *
+ * Latitude/longitude spherical geodesy formulae & scripts (c) Chris Veness 2002-2010
+ *   - www.movable-type.co.uk/scripts/latlong.html
+ *           
  */
 
 var jarvis = {
