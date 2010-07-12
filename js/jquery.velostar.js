@@ -177,28 +177,39 @@ jQuery.veloStar = {
         var center_on_map = new google.maps.LatLng( center.latitude,
                 center.longitude );
 
-        // Create a draggable marker
-        var marker = new google.maps.Marker( {
-            map: map,
-            position: center_on_map,
-            draggable: true,
-            title: opts.title
-        } );
-
         var circle_options = {
             map: map,
             'radius': radius,
             fillColor: '#FF0000',
-            strikeColor: '#FF0000'
+            strikeColor: '#FF0000',
+            center: center_on_map,
+            title: opts.title
         } ;
         jQuery.extend( circle_options, opts );
         
         // Add a Circle overlay to the map
         var circle = new google.maps.Circle( circle_options );
 
-        // Bind this Circle's center to the Marker's position
-        circle.bindTo( 'center', marker, 'position' );
-        return marker;
+        return circle;
+    },
+    drawMarkersForStations: function( map, stations ) {
+        var markers = [];
+        jQuery.each( stations, function( idx, station ) {
+            var myLatlng = new google.maps.LatLng( station.latitude, station.longitude );
+            var myOptions = {
+              zoom: 4,
+              center: myLatlng,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var marker = new google.maps.Marker({
+                position: myLatlng, 
+                map: map, 
+                title: station.name
+            });   
+            
+            markers.push( marker );
+        });
+        return markers;
     }
 
 };
