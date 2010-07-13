@@ -211,8 +211,20 @@ jQuery.veloStar = {
                 map: map,
                 title: station.name,
                 icon: image
-            } );
+            });
 
+            google.maps.event.addListener( marker, 'click', function() {
+                var infow =  new google.maps.InfoWindow({
+                    content:
+                        '<div class="infos_station">' +
+                        '<p>Actuellement:</p>' +
+                        '<p><b>Vélos disponibles: </b>' + station.bikesavailable +'</p>' +
+                        '<p><b>Emplacements disponibles: </b>' + station.slotsavailable +'</p>' +
+                        '<img src="export/' + station.number  +'.png"></div>'
+                });
+                infow.open( map, marker );
+            });
+            
             markers.push( marker );
         } );
         return markers;
