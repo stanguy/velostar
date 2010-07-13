@@ -164,7 +164,7 @@ jQuery.veloStar = {
         return s;
     },
 
-    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
     drawCircleFromBoudingBox: function( map, bl, tr, opts ) {
         var center = {
@@ -184,31 +184,37 @@ jQuery.veloStar = {
             strikeColor: '#FF0000',
             center: center_on_map,
             title: opts.title
-        } ;
+        };
         jQuery.extend( circle_options, opts );
-        
+
         // Add a Circle overlay to the map
         var circle = new google.maps.Circle( circle_options );
 
         return circle;
     },
-    drawMarkersForStations: function( map, stations ) {
+    drawMarkersForStations: function( map, stations, computeImage ) {
+        if( null == computeImage ) {
+            computeImage = function() {};
+        }
         var markers = [];
         jQuery.each( stations, function( idx, station ) {
-            var myLatlng = new google.maps.LatLng( station.latitude, station.longitude );
+            var myLatlng = new google.maps.LatLng( station.latitude,
+                    station.longitude );
             var myOptions = {
-              zoom: 4,
-              center: myLatlng,
-              mapTypeId: google.maps.MapTypeId.ROADMAP
+                zoom: 4,
+                center: myLatlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
             };
-            var marker = new google.maps.Marker({
-                position: myLatlng, 
-                map: map, 
-                title: station.name
-            });   
-            
+            var image = computeImage( station );
+            var marker = new google.maps.Marker( {
+                position: myLatlng,
+                map: map,
+                title: station.name,
+                icon: image
+            } );
+
             markers.push( marker );
-        });
+        } );
         return markers;
     }
 
