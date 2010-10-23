@@ -9,6 +9,7 @@ module VeloStar
       doc.search("/opendata/answer/data/station").collect do|el|
         {
           :id => el.search("number")[0].innerText,
+          :name => el.search("name")[0].innerText,
           :latitude => el.search("latitude")[0].innerText.to_f,
           :longitude => el.search("longitude")[0].innerText.to_f,
           :bikes => el.search("bikesavailable")[0].innerText.to_i,
