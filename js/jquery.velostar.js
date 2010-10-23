@@ -214,13 +214,20 @@ jQuery.veloStar = {
             });
 
             google.maps.event.addListener( marker, 'click', function() {
+                var content = $('<div class="infos_station">' +
+                '<h2>' + station.name + '</h2>' +
+                '<p>Actuellement:</p>' +
+                '<p><b>Vélos disponibles: </b>' + station.bikesavailable +'</p>' +
+                '<p><b>Emplacements disponibles: </b>' + station.slotsavailable +'</p>' +
+                '<select><option value="">Complet</option><option value="_daily">Du jour</option><option value="_weekly">Hebdo</option><option value="_monthly">Mensuel</option></select>' +
+                '<br /><img src="export/' + station.number  +'.png"></div>');
                 var infow =  new google.maps.InfoWindow({
-                    content:
-                        '<div class="infos_station">' +
-                        '<p>Actuellement:</p>' +
-                        '<p><b>Vélos disponibles: </b>' + station.bikesavailable +'</p>' +
-                        '<p><b>Emplacements disponibles: </b>' + station.slotsavailable +'</p>' +
-                        '<img src="export/' + station.number  +'.png"></div>'
+                    content: content[0]
+                });
+                content.children('select').change(function(){
+                   var src = content.children('img').attr('src');
+                   src = src.replace( /(_[a-z]+)?\./, content.children('select').val() + '.' );
+                   content.children('img').attr('src',src);
                 });
                 infow.open( map, marker );
             });
